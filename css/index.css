@@ -18,8 +18,8 @@ ul {
 
 /* header */
 
-.header {
-    z-index: 100;
+.header-bottom {
+    z-index: 1010;
     position: fixed;
     width: 100%;
 }
@@ -32,6 +32,7 @@ ul {
     height: 100%;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -44,8 +45,16 @@ ul {
 
 .header-top a {
     color: white;
-    font-size: 14px;
+    font-size: 17px;
     margin: 5px;
+}
+
+.header-top-left a:nth-child(1) {
+    margin-right: 30px;
+}
+
+.header-top a i {
+    font-size: 22px;
 }
 
 
@@ -59,6 +68,7 @@ ul {
 
 .lang-icon {
     float: right;
+    margin-bottom: 0px;
 }
 
 .lang-icon li {
@@ -69,23 +79,87 @@ ul {
     /* height: 100px; */
     /* width: 100%; */
     padding: 25px 0px;
-    background-color: white;
+    /* background-color: white; */
+    /* transition: 0.5s; */
 }
+
+#hero-wrapper {
+	 height: 100%;
+	 width: 100%;
+	 /* position: fixed; */
+}
+ #hero-wrapper .carousel-wrapper, #hero-carousel {
+	 height: 100%;
+	 width: 100%;
+	 /* position: absolute; */
+}
+ #hero-carousel img {
+	 left: 0;
+	 bottom: 0;
+     min-width: 100%;
+	 min-height: 100%;
+	 max-width: none;
+	 width: 100vw;
+	 height: 100vh;
+}
+ #hero-carousel i {
+	 position: absolute;
+     top: calc(50% - 80px);
+     font-size: 80px;
+    color: green;
+}
+ .carousel-fade .carousel-inner .item {
+	 opacity: 0;
+	 transition-property: opacity;
+}
+ .carousel-fade .carousel-inner .active {
+	 opacity: 1;
+}
+ .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+	 left: 0;
+	 opacity: 0;
+	 z-index: 1;
+}
+ .carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right {
+	 opacity: 1;
+}
+ .carousel-fade .carousel-control {
+	 z-index: 2;
+}
+ 
 
 .logo {
     margin: 0px;
+}
+
+/* .carousel , .carousel img{
+    height: 100vh!important;
+} */
+
+.logo {
+    transition: 0.5s;
 }
 
 .menu li {
     display: inline-block;
 }
 
+
+.header-bottom .container {
+    width: 80%;
+    margin: auto;
+}
 .menu li > a {
-    font-size: 16px;
+    font-size: 18px;
     color: black;
-    margin-left: 15px;
+    margin-right: 25px;
     padding: 15px 0px;
     text-transform: uppercase;
+}
+
+.menu li > a:nth-last-child() {
+    margin-right: 0px;
+
 }
 
 .menu .active {
@@ -101,9 +175,27 @@ ul {
     border-radius: 0px;
 }
 
+
+
 .title-modify {
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: 600;
     text-transform: uppercase;
+}
+
+.autoplay .slick-dots li button:before {
+    color:  #ccc;
+}
+
+.autoplay .slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: green;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+    border: 1px solid #ddd;
+    margin: 0px 5px;
 }
 
 .about p {
@@ -111,7 +203,7 @@ ul {
 }
 
 main {
-    padding: 70px 0px;
+    padding: 70px 0px 30px 0px;
 }
 
 .title-product {
@@ -180,6 +272,34 @@ main {
     padding: 20px 0px;
     margin-top: 10px;
 }
+
+.pagination {
+    display: inline-block;
+    border-radius:0px;
+}
+
+.pagination>li>a, .pagination>li>span {
+    background-color:#ddd;
+    color: black;
+    margin: 0px 5px;
+    border-radius:0px!important;
+}
+
+.pagination .active a {
+    background-color:#13a64e;
+}
+
+.img-video {
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-youtube {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px); 
+}
+
 /* dropdown */
 .dropbtn {
     color: white;
@@ -193,24 +313,26 @@ main {
   }
   
   .dropdown-content {
-    display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    border: 1px solid white;
-    right: 0px;
+    display: none;
+    /* right: 0px; */
     top: 36px;
   }
   
   .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    color: white;
+    padding: 7px 12px;
     text-decoration: none;
     display: block;
     background-color: #13a64e;
-    border: 1px solid white;
+    border-bottom: 0.5px solid white;
+  }
+  .dropdown-content a:last-child {
+    border-bottom: 0px;
   }
 
   .breadcrum {
@@ -218,7 +340,7 @@ main {
       background-repeat: no-repeat;
       background-size: cover;
       z-index: 200;
-      margin-top: 89px;
+      margin-top: 41px;
       padding: 50px;
       margin-bottom: 40px;
   }
@@ -242,7 +364,21 @@ main {
 
   .breadcrumb a {
     color: white;
-    font-size: 16px;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .breadcrumb>.active {
+      color: #02af02;
+      font-size: 17px;
+        text-transform: uppercase;
+        font-weight: 600;
+  }
+
+  .date-tim {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
   }
 
     .ati-about .media {
@@ -263,10 +399,38 @@ main {
 
     .contact .form-control {
         border-radius: 0px;
+        border: 1px solid black;
     }
+
+    .contact ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: black!important;
+        font-weight: 700;
+        font-size: 14px;
+        opacity: 1; /* Firefox */
+      }
+
+      /* .contact .form-group:focus ::placeholder {
+        text-indent: -10000px;
+      } */
+      
+      .contact :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: black!important;
+        font-weight: 700;
+
+      }
+      
+      .contact ::-ms-input-placeholder { /* Microsoft Edge */
+        color: black!important;
+        font-weight: 700;
+      }
+      
 
     .contact .btn {
         border-radius: 0px;
+    }
+
+    #btn-contact {
+        padding: 5px 50px;
     }
 
     .detail-new .media img {
@@ -349,7 +513,7 @@ main {
   .icon-menu {
     font-size: 25px;
     float: right;
-    margin-right: 20px;
+    /* margin-right: 20px; */
   }
 
   .bg-opacity {
@@ -412,9 +576,16 @@ main {
         padding: 10px;
     }
 
-
     .header-slider {
-        padding-top: 136px;
+        padding-top: 80px;
+    }
+    #hero-carousel img {
+        height: auto;
+    }
+
+    #hero-carousel i {
+        top: calc(50% - 20px);
+        font-size: 40px;
     }
 
     .footer-left {
@@ -422,7 +593,7 @@ main {
     }
 
     .breadcrum { 
-        margin-top: 66px;
+        margin-top: 26px;
     }
     .list-new {
         margin-top: 30px;
@@ -452,7 +623,20 @@ main {
         width: 95%;
         margin: auto;
     }
+
+    .list-img-item {
+        width: 50%;
+    }
+
+    
 }
+
+@media(max-width: 480px) { 
+    .list-img-item {
+        width: 100%;
+    }
+}
+
 
 @media(max-width: 400px) { 
     .menu { 
