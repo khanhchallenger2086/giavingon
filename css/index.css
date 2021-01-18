@@ -80,6 +80,15 @@ ul {
     font-size: 22px;
 }
 
+.left-arrow img {
+    min-width: 40px!important;
+    width: 40px!important;
+}
+
+.right-arrow img {
+    width: 40px!important;
+    min-width: 40px!important;
+}
 
 .mt-div {
     margin-top: 50px;
