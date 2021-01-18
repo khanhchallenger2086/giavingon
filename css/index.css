@@ -680,6 +680,16 @@ main {
         text-align: center;
         margin-bottom: 10px;
     }
+
+    .left-arrow img {
+        min-width: 14px!important;
+        width: 7px!important;
+    }
+    
+    .right-arrow img {
+        width: 14px!important;
+        min-width: 7px!important;
+    }
 }
 
 @media(max-width: 480px) { 
