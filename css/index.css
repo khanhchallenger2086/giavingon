@@ -1,3 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -150,9 +156,10 @@ ul {
     margin: auto;
 }
 .menu li > a {
-    font-size: 18px;
+    font-size: 17px;
     color: black;
     margin-right: 25px;
+    font-weight: 700;
     padding: 15px 0px;
     text-transform: uppercase;
 }
@@ -241,6 +248,10 @@ main {
 .map {
     width: 60%;
     float: left;
+}
+
+.map iframe {
+    height: 477px;
 }
 
 .footer-left .title-modify {
@@ -341,7 +352,7 @@ main {
       background-size: cover;
       z-index: 200;
       margin-top: 41px;
-      padding: 50px;
+      padding: 70px;
       margin-bottom: 40px;
   }
   .breadcrum  .title-modify{
@@ -366,14 +377,20 @@ main {
     color: white;
     text-transform: uppercase;
     font-size: 17px;
-    font-weight: 600;
+    /* font-weight: 600; */
   }
+
+  .dropdown i {
+        float: right;
+        margin-top: 10px;
+        margin-right: 47px;
+    }
 
   .breadcrumb>.active {
       color: #02af02;
       font-size: 17px;
         text-transform: uppercase;
-        font-weight: 600;
+        /* font-weight: 600; */
   }
 
   .date-tim {
@@ -399,11 +416,11 @@ main {
 
     .contact .form-control {
         border-radius: 0px;
-        border: 1px solid black;
+        border: 1px solid #707070;
     }
 
     .contact ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: black!important;
+        color: #333333!important;
         font-weight: 700;
         font-size: 14px;
         opacity: 1; /* Firefox */
@@ -489,9 +506,9 @@ main {
         display: none;
     }
 
-    .list-img-item p:hover .bg-img {
+    /* .list-img-item p:hover .bg-img {
         display: block;
-    }
+    } */
 
   @media(min-width: 992px) {
     .dropdown:hover .dropdown-content {display: block;}
@@ -629,6 +646,14 @@ main {
     }
 
     
+}
+
+@media(max-width: 510px) {
+    .breadcrum .col-xs-6 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 
 @media(max-width: 480px) { 

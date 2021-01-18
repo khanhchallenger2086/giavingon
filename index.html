@@ -6,6 +6,8 @@
     <title>Document</title>
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
     <link href="https://use.fontawesome.com/304fb82c7c.css" media="all" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
@@ -37,18 +39,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-2 col-sm-2 col-md-1 col-lg-2">
-                            <h1 class="logo text-center"><a href=""><img src="img/logo.png" width="59px" alt="logo.png"></a></h1>
+                            <h1 class="logo text-center"><a href=""><img src="img/logo.png" width="70px" alt="logo.png"></a></h1>
                         </div>
 
                         <div class="col-xs-10 col-sm-10 col-md-11 col-lg-10">
                             <span class="icon-menu hidden-md hidden-lg"><i class="fa fa-bars" aria-hidden="true"></i></span>
                             <ul class="menu">
                                 <span class="close-menu hidden-md hidden-lg">x</span>
-                                <li><a class="active" href="index.html"><img src="./img/home.png" alt="home.png"></a></li>
+                                <li><a class="active" href="index.html">Home</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li class="dropdown"><a href="list-product.html" class="dropbtn">Products <i style="font-size: 10px;" class="fa fa-chevron-down hidden-lg" aria-hidden="true"></i></a>
                                     <div class="dropdown-content">
-                                        <a href="#">Link 1</a>
+                                        <a href="#">Gall</a>
                                         <a href="#">Link 2</a>
                                         <a href="#">Link 3</a>
                                       </div>
@@ -58,9 +60,9 @@
                                 <li><a href="videos.html">Agri-Sustanable</a></li>
                                 <li class="dropdown"><a href="videos.html" class="dropbtn">Event <i style="font-size: 10px;" class="fa fa-chevron-down hidden-lg" aria-hidden="true"></i></a>
                                     <div class="dropdown-content">
-                                        <a href="#">Link 1</a>
-                                        <a href="#">Link 2</a>
-                                        <a href="#">Link 3</a>
+                                        <a href="#">Gallery</a>
+                                        <a href="#">Video</a>
+                                        <a href="#">News</a>
                                       </div>
                                 </li>
                                 <li><a href="contact.html">Contact</a></li>
@@ -114,12 +116,35 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="img-video">
-                            <span class="btn-youtube"><img src="./img/btn-youtube.png"  alt="btn-youtube.jpg"></span>
+                            <span class="btn-youtube" data-toggle="modal" data-target="#myModal"><img src="./img/btn-youtube.png"  alt="btn-youtube.jpg"></span>
                             <img src="./img/img-video.png" class="max100" alt="img-video.png">
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p><iframe width="100%" height="250" src="https://www.youtube.com/embed/sqRRZpACzO0">
+                </iframe></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+
+        </div>
         </div>
 
         <div class="product mt-div">
@@ -243,6 +268,10 @@
                 <div><img src="./img/trade4.png" class="max100" alt="trade1"></div>
                 <div><img src="./img/trade1.png" class="max100" alt="trade1"></div>
                 <div><img src="./img/trade2.png" class="max100" alt="trade1"></div>
+                <div><img src="./img/trade3.png" class="max100" alt="trade1"></div>
+                <div><img src="./img/trade3.png" class="max100" alt="trade1"></div>
+                <div><img src="./img/trade3.png" class="max100" alt="trade1"></div>
+                <div><img src="./img/trade3.png" class="max100" alt="trade1"></div>
                 <div><img src="./img/trade3.png" class="max100" alt="trade1"></div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('.autoplay').slick({
         slidesToShow: 6,
-        slidesToScroll: 1,
+        slidesToScroll: 6,
         dots: true,
         autoplay: true,
         autoplaySpeed: 2000,
@@ -33,6 +33,14 @@ $(document).ready(function(){
             // settings: "unslick"
             // instead of a settings object
           ]
+    });
+
+    $(".list-img-item p").mouseover(function(){
+      $(this).find('.bg-img').fadeIn();
+    });
+
+    $(".list-img-item p").mouseleave(function() {
+      $(this).find('.bg-img').fadeOut('fast');
     });
 
   
@@ -93,14 +101,16 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 50){
 			menu.css("top", "0px");
-      menu.css("padding-top", "5px");
+      menu.css("padding", "5px 0px");
 			menu.css("transition", "0.5s");
-			$(".logo img").css("width", "50px");
+			menu.css("backgroundColor", "white");
+			$(".logo img").css("width", "59px");
 		} else {
       menu.css("top", "50px");
-      menu.css("padding-top", "25px");
-			menu.css("transition", "none");
-      $(".logo img").css("width", "59px");
+      menu.css("padding", "25px 0px");
+      menu.css("transition", "none");
+			menu.css("backgroundColor", "transparent");
+      $(".logo img").css("width", "70px");
 		}
 	})
 
