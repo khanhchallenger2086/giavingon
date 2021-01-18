@@ -15,6 +15,22 @@
           url('../fonts/Roboto-Thin.ttf') format('ttf'),
           url('../fonts/Roboto-ThinItalic.ttf') format('ttf'),
   } */
+  .slider-item-product .slick-initialized .slick-slide {
+    margin: 5px;
+  }
+
+  .main-img {
+      margin: 5px 5px 10px 5px;
+  }
+
+  .main-img img {
+      min-height: 80%;
+  }
+
+  .thumnail-product {
+      margin-bottom: 20px
+  }
+  
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
     font-family: 'Roboto', sans-serif;
@@ -177,10 +193,7 @@ ul {
 }
 
 
-.header-bottom .container {
-    width: 80%;
-    margin: auto;
-}
+
 .menu li > a {
     font-size: 17px;
     color: black;
@@ -406,11 +419,6 @@ main {
     /* font-weight: 600; */
   }
 
-  .dropdown i {
-        float: right;
-        margin-top: 10px;
-        margin-right: 47px;
-    }
 
   .breadcrumb>.active {
       color: #02af02;
@@ -528,12 +536,60 @@ main {
         border-radius: 50%;
     }
 
+    .plus i {
+        font-size: 70px;
+        color: white;
+    }
+
     .bg-img {
         display: none;
     }
 
+    .popup-img {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        top:0px;
+        left: 0px;
+        z-index: 99999;
+        display: none;
+        overflow-y: scroll;
+    }
+
+    .popup-img-inner {
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .popup-img-inner img {
+        width: 60%;
+    }
+
+    .close-popup-img {
+        position: absolute;
+        font-size: 50px;
+        top: 10px;
+        color: white;
+        right: 30px;
+        cursor: pointer;
+    }
+
+    .popup-img-dp {
+        display: block;
+    }
+
+
     /* .list-img-item p:hover .bg-img {
         display: block;
+    } */
+    /* @media(max-width:1200px) {
+        .header-bottom .container {
+            width: 80%;
+            margin: auto;
+        }
     } */
 
   @media(min-width: 992px) {
@@ -588,6 +644,21 @@ main {
         z-index: 102;
         transform: translate3d(400px, 0px, 0px);
         transition: 0.5s;
+    }
+
+    
+  .dropdown i {
+    float: right;
+    margin-top: 10px;
+    margin-right: 47px;
+}
+
+    .header-top .container {
+        width: 100%;
+    }
+
+    .header-top {
+        padding: 0px 10px;
     }
 
     .menu li {

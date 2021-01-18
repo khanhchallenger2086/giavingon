@@ -35,15 +35,44 @@ $(document).ready(function(){
           ]
     });
 
-    $(".list-img-item p").mouseover(function(){
-      $(this).find('.bg-img').fadeIn();
-    });
 
-    $(".list-img-item p").mouseleave(function() {
-      $(this).find('.bg-img').fadeOut('fast');
-    });
+    $('.slider-item-product').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      dots: false,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+  });
 
-  
+
     $('.autoplay-related').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -80,24 +109,35 @@ $(document).ready(function(){
   });
 
 
+  // của videos
+  $(".list-img-item p").mouseover(function(){
+    $(this).find('.bg-img').fadeIn();
+  });
+
+  $(".list-img-item p").mouseleave(function() {
+    $(this).find('.bg-img').fadeOut('fast');
+  });
+
+  $(".list-img-item p").click(function(){
+    var link_img = $(this).find('img').attr('src');
+    $('.popup-img-inner img').attr('src',link_img);
+    $('.popup-img').toggleClass('popup-img-dp');
+  });
+
+  $(".close-popup-img").click(function(){
+    $('.popup-img-inner img').attr('src','');
+    $('.popup-img').toggleClass('popup-img-dp');
+  });
+// end của videos
+
+// của detail-product
+  $(".slick-slide img").click(function(){
+    $(".main-img img").attr('src',$(this).attr('src'))
+  });
+// end của detail-product
 
     // var scrollTop = $('#scroll_top');
     var menu = $('.header-bottom');
-    var header = $('.header');
-
-    var position = $(window).scrollTop(); 
-
-  //   $(window).scroll(function() {
-  //     var scroll = $(window).scrollTop();
-  //     if(scroll > position) {
-	// 		  header.css("top", "16px");
-	// 		  header.css("position", "fixed");
-  //     } else {
-	// 		  header.css("top", "0px");
-  //     }
-  //     position = scroll;
-  // });
-
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 50){
 			menu.css("top", "0px");
